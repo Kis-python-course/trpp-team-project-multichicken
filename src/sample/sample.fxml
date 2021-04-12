@@ -1,8 +1,56 @@
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.layout.GridPane?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<GridPane fx:controller="sample.Controller"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
-</GridPane>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button layoutX="460.0" layoutY="101.0" mnemonicParsing="false" prefHeight="69.0" prefWidth="91.0" text="Calculate" />
+      <GridPane layoutX="1.0" layoutY="189.0" prefHeight="174.0" prefWidth="545.0" AnchorPane.rightAnchor="37.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="332.33331298828125" minWidth="10.0" prefWidth="315.66668701171875" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="484.0000228881836" minWidth="0.0" prefWidth="150.33331298828125" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="484.0000228881836" minWidth="10.0" prefWidth="140.66668192545575" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button maxWidth="38.0" minHeight="25.0" minWidth="38.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="38.0" scaleX="2.0" scaleY="2.0" text="+" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Button maxWidth="38.0" minHeight="25.0" minWidth="38.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="38.0" scaleX="2.0" scaleY="2.0" text="\%" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Button maxWidth="38.0" minHeight="25.0" minWidth="38.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="38.0" scaleX="2.0" scaleY="2.0" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Button maxWidth="35.0" minHeight="25.0" minWidth="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="10.0" scaleX="2.2" scaleY="2.0" text="X" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Button maxWidth="38.0" minHeight="25.0" minWidth="38.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="38.0" scaleX="2.0" scaleY="2.0" text="/" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Button maxHeight="25.0" maxWidth="38.0" minHeight="25.0" minWidth="38.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="38.0" scaleX="2.0" scaleY="2.0" text="ABS" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Button mnemonicParsing="false" scaleX="2.0" scaleY="2.0" text="1" translateX="75.0" GridPane.valignment="CENTER" />
+            <Button mnemonicParsing="false" scaleX="2.0" scaleY="2.0" text="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Button mnemonicParsing="false" scaleX="2.0" scaleY="2.0" text="3" translateX="-75.0" GridPane.halignment="RIGHT" GridPane.valignment="CENTER" />
+            <Button mnemonicParsing="false" scaleX="2.0" scaleY="2.0" text="8" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Button mnemonicParsing="false" scaleX="2.0" scaleY="2.0" text="6" translateX="-75.0" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Button mnemonicParsing="false" scaleX="2.0" scaleY="2.0" text="4" translateX="75.0" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Button mnemonicParsing="false" scaleX="2.0" scaleY="2.0" text="9" translateX="-75.0" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Button mnemonicParsing="false" scaleX="2.0" scaleY="2.0" text="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Button mnemonicParsing="false" scaleX="2.0" scaleY="2.0" text="7" translateX="75.0" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+         </children>
+      </GridPane>
+      <TextArea layoutX="2.0" prefHeight="81.0" prefWidth="600.0" text="    ULTIMATE MULTICHICKEN CALCULATOR">
+         <font>
+            <Font name="Garamond" size="26.0" />
+         </font>
+      </TextArea>
+      <TextField layoutX="18.0" layoutY="101.0" prefHeight="69.0" prefWidth="416.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>
