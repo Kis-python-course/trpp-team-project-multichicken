@@ -1,12 +1,10 @@
 package sample;
 
 import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import org.w3c.dom.Text;
 
 public class Controller {
 
@@ -63,11 +61,18 @@ public class Controller {
 
     @FXML
     void initialize() {
-        oneButton.setOnAction(new EventHandler() {
-            @Override
-            public void handle(Event event) {
-
-            }
-        });
+        oneButton.setOnAction(event -> calcArea.setText(calcArea.getText() + "1"));
+        TwoButton.setOnAction(event -> calcArea.setText(calcArea.getText() + "2"));
+        ThreeButton.setOnAction(event -> calcArea.setText(calcArea.getText() + "3"));
+        FourButton.setOnAction(event -> calcArea.setText(calcArea.getText() + "4"));
+        FiveButton.setOnAction(event -> calcArea.setText(calcArea.getText() + "5"));
+        SixButton.setOnAction(event -> calcArea.setText(calcArea.getText() + "6"));
+        SevenButton.setOnAction(event -> calcArea.setText(calcArea.getText() + "7"));
+        EightButton.setOnAction(event -> calcArea.setText(calcArea.getText() + "8"));
+        nineButton.setOnAction(event -> calcArea.setText(calcArea.getText() + "9"));
+        plusButton.setOnAction(event -> calcArea.setText(calcArea.getText() + " + "));
+        minusButton.setOnAction(event -> calcArea.setText(calcArea.getText() + " - "));
+        divideButton.setOnAction(event -> calcArea.setText(calcArea.getText() + " / "));
+        multiplyButton.setOnAction(event -> calcArea.setText(calcArea.getText() + " * "));
     }
 }
