@@ -91,12 +91,12 @@ public class Controller {
 
     void omg(){
         one.setOnAction(event -> calcArea.setText(calcArea.getText() + 1));
+        two.setOnAction(event -> calcArea.setText(calcArea.getText() + 1));
     }
 
     @FXML
     void initialize(){
-
-        one.setOnAction(event -> omg());
+        omg();
     }
 
 

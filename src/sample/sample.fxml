@@ -15,7 +15,7 @@
    <children>
       <Button layoutX="2.0" prefHeight="81.0" prefWidth="600.0" text="    ULTIMATE MULTICHICKEN CALCULATOR">
          <font>
-            <Font name="Times" size="26.0" />
+            <Font name="Arial" size="26.0" />
          </font>
       </Button>
       <Button fx:id="calcButton" layoutX="460.0" layoutY="101.0" mnemonicParsing="false" prefHeight="69.0" prefWidth="91.0" text="Calculate" />
