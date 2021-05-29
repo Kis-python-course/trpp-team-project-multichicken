@@ -24,7 +24,7 @@ public class Controller {
     boolean another = false;
 
     void omg(){
-
+        //дальше сами
         one.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
