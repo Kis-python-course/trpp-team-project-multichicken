@@ -68,12 +68,38 @@ public class Controller {
         four.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                calcArea.setText(calcArea.getText() + 3);
+                calcArea.setText(calcArea.getText() + 4);
 
                 if (!another) {
-                    firstNum = firstNum + "3";
+                    firstNum = firstNum + "4";
                 } else {
-                    secondNum = secondNum + "3";
+                    secondNum = secondNum + "4";
+                }
+            }
+        });
+
+        five.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                calcArea.setText(calcArea.getText() + 5);
+
+                if (!another) {
+                    firstNum = firstNum + "5";
+                } else {
+                    secondNum = secondNum + "5";
+                }
+            }
+        });
+
+        six.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                calcArea.setText(calcArea.getText() + 6);
+
+                if (!another) {
+                    firstNum = firstNum + "6";
+                } else {
+                    secondNum = secondNum + "6";
                 }
             }
         });
