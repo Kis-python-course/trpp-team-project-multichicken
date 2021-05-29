@@ -83,19 +83,45 @@ public class Controller {
     }
      */
     @FXML
-    Button one, two, three, four, five, six, seven, eight, nine, zero;
+    Button one, two, three, four, five, six, seven, eight, nine, zero, calcButton;
 
     @FXML
     TextField calcArea;
 
+    double num = 0;
+
+    String firstNum = "";
+    String secondNum = "";
 
     void omg(){
-        one.setOnAction(event -> calcArea.setText(calcArea.getText() + 1));
-        two.setOnAction(event -> calcArea.setText(calcArea.getText() + 1));
+        one.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                calcArea.setText(calcArea.getText() + 1);
+                secondNum = secondNum + "1";
+            }
+        });
+        two.setOnAction(new EventHandler<ActionEvent>() {
+
+            @Override
+            public void handle(ActionEvent event) {
+                calcArea.setText(calcArea.getText() + 2);
+                secondNum = secondNum + "2";
+            }
+        });
+        three.setOnAction(new EventHandler<ActionEvent>() {
+
+            @Override
+            public void handle(ActionEvent event) {
+                calcArea.setText(calcArea.getText() + 2);
+                secondNum = secondNum + "2";
+            }
+        });
     }
 
     @FXML
     void initialize(){
+        //calcButton.setOnAction(event -> calcArea.setText();
         omg();
     }
 
