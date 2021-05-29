@@ -7,8 +7,11 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
 public class Controller {
+    // я опаздываю на электрон, так что доделаю в нём уже
+    // не, ну реально дичь написали, я в шоке девачки =O
+    // god bless mvu <3
 
-    @FXML
+    /*@FXML
     private Button calcButton;
 
     @FXML
@@ -59,6 +62,8 @@ public class Controller {
     @FXML
     private TextField calcArea;
 
+    float a;
+
     @FXML
     void initialize() {
         oneButton.setOnAction(event -> calcArea.setText(calcArea.getText() + "1"));
@@ -70,9 +75,30 @@ public class Controller {
         SevenButton.setOnAction(event -> calcArea.setText(calcArea.getText() + "7"));
         EightButton.setOnAction(event -> calcArea.setText(calcArea.getText() + "8"));
         nineButton.setOnAction(event -> calcArea.setText(calcArea.getText() + "9"));
+
         plusButton.setOnAction(event -> calcArea.setText(calcArea.getText() + " + "));
         minusButton.setOnAction(event -> calcArea.setText(calcArea.getText() + " - "));
         divideButton.setOnAction(event -> calcArea.setText(calcArea.getText() + " / "));
         multiplyButton.setOnAction(event -> calcArea.setText(calcArea.getText() + " * "));
     }
+     */
+    @FXML
+    Button one, two, three, four, five, six, seven, eight, nine, zero;
+
+    @FXML
+    TextField calcArea;
+
+
+    void omg(){
+        one.setOnAction(event -> calcArea.setText(calcArea.getText() + 1));
+    }
+
+    @FXML
+    void initialize(){
+
+        one.setOnAction(event -> omg());
+    }
+
+
+
 }
