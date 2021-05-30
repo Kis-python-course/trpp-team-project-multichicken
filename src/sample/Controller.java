@@ -13,11 +13,15 @@ public class Controller {
     @FXML
     TextField calcArea;
 
-    String firstNum = "";
-    String secondNum = "";
+    String firstNum = "", secondNum = "", param = "";
+    int result = 0;
+
+
+
     boolean another = false;
 
     void buttonsHandler(){
+
         one.setOnAction(actionEvent -> {
             calcArea.setText(calcArea.getText() + 1);
             if (!another) {
@@ -26,6 +30,7 @@ public class Controller {
                 secondNum = secondNum + "1";
             }
         });
+
         two.setOnAction(event -> {
             calcArea.setText(calcArea.getText() + 2);
             if (!another) {
@@ -34,6 +39,7 @@ public class Controller {
                 secondNum = secondNum + "2";
             }
         });
+
         three.setOnAction(event -> {
             calcArea.setText(calcArea.getText() + 3);
             if (!another) {
@@ -42,6 +48,7 @@ public class Controller {
                 secondNum = secondNum + "3";
             }
         });
+
         four.setOnAction(actionEvent -> {
             calcArea.setText(calcArea.getText() + 4);
             if (!another) {
@@ -50,6 +57,7 @@ public class Controller {
                 secondNum = secondNum + "4";
             }
         });
+
         five.setOnAction(actionEvent -> {
             calcArea.setText(calcArea.getText() + 5);
             if (!another) {
@@ -58,6 +66,7 @@ public class Controller {
                 secondNum = secondNum + "5";
             }
         });
+
         six.setOnAction(actionEvent -> {
             calcArea.setText(calcArea.getText() + 6);
             if (!another) {
@@ -66,6 +75,7 @@ public class Controller {
                 secondNum = secondNum + "6";
             }
         });
+
         seven.setOnAction(actionEvent -> {
             calcArea.setText(calcArea.getText() + 7);
             if (!another) {
@@ -74,6 +84,7 @@ public class Controller {
                 secondNum = secondNum + "7";
             }
         });
+
         eight.setOnAction(actionEvent -> {
             calcArea.setText(calcArea.getText() + 8);
             if (!another) {
@@ -82,6 +93,7 @@ public class Controller {
                 secondNum = secondNum + "8";
             }
         });
+
         eight.setOnAction(actionEvent -> {
             calcArea.setText(calcArea.getText() + 8);
             if (!another) {
@@ -90,6 +102,7 @@ public class Controller {
                 secondNum = secondNum + "8";
             }
         });
+
         nine.setOnAction(actionEvent -> {
             calcArea.setText(calcArea.getText() + 9);
             if (!another) {
@@ -98,6 +111,7 @@ public class Controller {
                 secondNum = secondNum + "9";
             }
         });
+
         zero.setOnAction(actionEvent -> {
             calcArea.setText(calcArea.getText() + 0);
             if (!another) {
@@ -106,6 +120,7 @@ public class Controller {
                 secondNum = secondNum + "0";
             }
         });
+
         doubleZero.setOnAction(actionEvent -> {
             calcArea.setText(calcArea.getText() + "00");
             if (!another) {
@@ -114,6 +129,7 @@ public class Controller {
                 secondNum = secondNum + "00";
             }
         });
+
         clearOne.setOnAction(actionEvent -> {
             if (!calcArea.getText().equals("")){
                 calcArea.setText(calcArea.getText().substring(0, calcArea.getLength() - 1));
@@ -128,31 +144,78 @@ public class Controller {
                 }
             }
         });
+
         clearAll.setOnAction(actionEvent -> {
             firstNum = "";
             secondNum = "";
             calcArea.setText("");
         });
+
         plusButton.setOnAction(actionEvent -> {
-
+            another = true;
+            param = "plus";
+            calcArea.setText(calcArea.getText() + "+");
         });
+
         minusButton.setOnAction(actionEvent -> {
-
+            another = true;
+            param = "minus";
+            calcArea.setText(calcArea.getText() + "-");
         });
+
         multiplyButton.setOnAction(actionEvent -> {
-
+            another = true;
+            param = "multiply";
+            calcArea.setText(calcArea.getText() + "*");
         });
+
         divideButton.setOnAction(actionEvent -> {
-
+            another = true;
+            param = "divide";
+            calcArea.setText(calcArea.getText() + "/");
         });
+
         remOfDivButton.setOnAction(actionEvent -> {
-
+            another = true;
+            param = "plus";
+            calcArea.setText(calcArea.getText() + "%");
         });
+
         absButton.setOnAction(actionEvent -> {
-
+            another = true;
+            param = "plus";
+            calcArea.setText(calcArea.getText() + "^");
         });
-        calcButton.setOnAction(actionEvent -> {
 
+        calcButton.setOnAction(actionEvent -> {
+            switch (param) {
+                case "plus":
+                    result = Integer.parseInt(firstNum) + Integer.parseInt(secondNum);
+                    break;
+                case "minus":
+                    result = Integer.parseInt(firstNum) - Integer.parseInt(secondNum);
+                    break;
+                case "multiply":
+                    result = Integer.parseInt(firstNum) * Integer.parseInt(secondNum);
+                    break;
+                case "divide":
+                    result = Integer.parseInt(firstNum) % Integer.parseInt(secondNum);
+                    break;
+                case "div":
+                    result = Integer.parseInt(firstNum) % Integer.parseInt(secondNum);
+                    break;
+                case "abs":
+                    result = Math.abs(Integer.parseInt(firstNum));
+                    break;
+            }
+
+            calcArea.setText(String.valueOf(result));
+
+            param = "";
+            firstNum = "";
+            secondNum = "";
+            result = 0;
+            another = false;
         });
     }
 
