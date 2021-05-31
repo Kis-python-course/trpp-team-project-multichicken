@@ -22,11 +22,18 @@ public class Controller {
     String param = "";
     double result = 0;
     boolean blockNumsInput = false;
-    boolean mathOperDefined = false;
-
-
+    boolean mathOperationDefined = false;
     boolean another = false;
-
+    void numsInput(String num) {
+        if (!blockNumsInput) {
+            calcArea.setText(calcArea.getText() + num);
+            if (!another) {
+                firstNum = firstNum + num;
+            } else {
+                secondNum = secondNum + num;
+            }
+        }
+    }
     void mathOperationAction(String operation) {
         String text = calcArea.getText();
         String operationSymbol = "";
@@ -38,7 +45,7 @@ public class Controller {
             case "RemOfDiv" -> operationSymbol = "%";
             case "Abs" -> operationSymbol = "|";
         }
-        if (mathOperDefined) {
+        if (mathOperationDefined) {
             if (!operation.equals(param)) {
                 if (operation.equals("Abs")) {
                     switch (param) {
@@ -66,25 +73,24 @@ public class Controller {
             }
         } else
             try {
-                    if (!firstNum.equals("")) {
-                        Double.parseDouble(firstNum);
-                        logsField.setText(logsField.getText() + "\nSuccessful first num parse!");
-                        another = true;
-                        param = operation;
-                        if (!operation.equals("Abs")) {
-                            calcArea.setText(text + " " + operationSymbol + " ");
-                        } else calcArea.setText(operationSymbol + text + operationSymbol);
-                        mathOperDefined = true;
-                    } else {
-                        logsField.setText("\n" + logsField.getText() + "\nPrint your first num first!");
-                    }
-                } catch (Exception e) {
-                    e.printStackTrace();
-                    logsField.setText("\n" + logsField.getText() + "\nCan't parse first num! Calc reset.");
-                    resetCalculator();
+                if (!firstNum.equals("")) {
+                    Double.parseDouble(firstNum);
+                    logsField.setText(logsField.getText() + "\nSuccessful first num parse!");
+                    another = true;
+                    param = operation;
+                    if (!operation.equals("Abs")) {
+                        calcArea.setText(text + " " + operationSymbol + " ");
+                    } else calcArea.setText(operationSymbol + text + operationSymbol);
+                    mathOperationDefined = true;
+                } else {
+                    logsField.setText("\n" + logsField.getText() + "\nPrint your first num first!");
                 }
-        }
-
+            } catch (Exception e) {
+                e.printStackTrace();
+                logsField.setText("\n" + logsField.getText() + "\nCan't parse first num! Calc reset.");
+                resetCalculator();
+            }
+    }
     void resetCalculator() {
         firstNum = "";
         secondNum = "";
@@ -96,130 +102,20 @@ public class Controller {
         another = false;
         blockNumsInput = false;
     }
-
     void buttonsHandler() {
         calcArea.setEditable(false);
         logsField.wrapTextProperty().set(true);
-        one.setOnAction(actionEvent -> {
-            if (!blockNumsInput) {
-                calcArea.setText(calcArea.getText() + 1);
-                if (!another) {
-                    firstNum = firstNum + "1";
-                } else {
-                    secondNum = secondNum + "1";
-                }
-            }
-        });
-        two.setOnAction(event -> {
-            if (!blockNumsInput) {
-                calcArea.setText(calcArea.getText() + 2);
-                if (!another) {
-                    firstNum = firstNum + "2";
-                } else {
-                    secondNum = secondNum + "2";
-                }
-            }
-        });
-        three.setOnAction(event -> {
-            if (!blockNumsInput) {
-                calcArea.setText(calcArea.getText() + 3);
-                if (!another) {
-                    firstNum = firstNum + "3";
-                } else {
-                    secondNum = secondNum + "3";
-                }
-            }
-        });
-        four.setOnAction(actionEvent -> {
-            if (!blockNumsInput) {
-                calcArea.setText(calcArea.getText() + 4);
-                if (!another) {
-                    firstNum = firstNum + "4";
-                } else {
-                    secondNum = secondNum + "4";
-                }
-            }
-        });
-        five.setOnAction(actionEvent -> {
-            if (!blockNumsInput) {
-                calcArea.setText(calcArea.getText() + 5);
-                if (!another) {
-                    firstNum = firstNum + "5";
-                } else {
-                    secondNum = secondNum + "5";
-                }
-            }
-        });
-        six.setOnAction(actionEvent -> {
-            if (!blockNumsInput) {
-                calcArea.setText(calcArea.getText() + 6);
-                if (!another) {
-                    firstNum = firstNum + "6";
-                } else {
-                    secondNum = secondNum + "6";
-                }
-            }
-        });
-        seven.setOnAction(actionEvent -> {
-            if (!blockNumsInput) {
-                calcArea.setText(calcArea.getText() + 7);
-                if (!another) {
-                    firstNum = firstNum + "7";
-                } else {
-                    secondNum = secondNum + "7";
-                }
-            }
-        });
-        eight.setOnAction(actionEvent -> {
-            if (!blockNumsInput) {
-                calcArea.setText(calcArea.getText() + 8);
-                if (!another) {
-                    firstNum = firstNum + "8";
-                } else {
-                    secondNum = secondNum + "8";
-                }
-            }
-        });
-        eight.setOnAction(actionEvent -> {
-            if (!blockNumsInput) {
-                calcArea.setText(calcArea.getText() + 8);
-                if (!another) {
-                    firstNum = firstNum + "8";
-                } else {
-                    secondNum = secondNum + "8";
-                }
-            }
-        });
-        nine.setOnAction(actionEvent -> {
-            if (!blockNumsInput) {
-                calcArea.setText(calcArea.getText() + 9);
-                if (!another) {
-                    firstNum = firstNum + "9";
-                } else {
-                    secondNum = secondNum + "9";
-                }
-            }
-        });
-        zero.setOnAction(actionEvent -> {
-            if (!blockNumsInput) {
-                calcArea.setText(calcArea.getText() + 0);
-                if (!another) {
-                    firstNum = firstNum + "0";
-                } else {
-                    secondNum = secondNum + "0";
-                }
-            }
-        });
-        doubleZero.setOnAction(actionEvent -> {
-            if (!blockNumsInput) {
-                calcArea.setText(calcArea.getText() + "00");
-                if (!another) {
-                    firstNum = firstNum + "00";
-                } else {
-                    secondNum = secondNum + "00";
-                }
-            }
-        });
+        one.setOnAction(actionEvent -> numsInput("1"));
+        two.setOnAction(event -> numsInput("2"));
+        three.setOnAction(event -> numsInput("3"));
+        four.setOnAction(actionEvent -> numsInput("4"));
+        five.setOnAction(actionEvent -> numsInput("5"));
+        six.setOnAction(actionEvent -> numsInput("6"));
+        seven.setOnAction(actionEvent -> numsInput("7"));
+        eight.setOnAction(actionEvent -> numsInput("8"));
+        nine.setOnAction(actionEvent -> numsInput("9"));
+        zero.setOnAction(actionEvent -> numsInput("0"));
+        doubleZero.setOnAction(actionEvent -> numsInput("00"));
         clearOne.setOnAction(actionEvent -> {
             if (!blockNumsInput) {
                 if (!calcArea.getText().equals("")) {
@@ -237,64 +133,45 @@ public class Controller {
             }
         });
         clearAll.setOnAction(actionEvent -> resetCalculator());
-        plusButton.setOnAction(actionEvent -> {
-            mathOperationAction("Plus");
-        });
-        minusButton.setOnAction(actionEvent -> {
-            mathOperationAction("Minus");
-        });
-        multiplyButton.setOnAction(actionEvent -> {
-            mathOperationAction("Multiply");
-        });
-        divideButton.setOnAction(actionEvent -> {
-            mathOperationAction("Divide");
-        });
-        remOfDivButton.setOnAction(actionEvent -> {
-            mathOperationAction("RemOfDiv");
-        });
-        absButton.setOnAction(actionEvent -> {
-            mathOperationAction("Abs");
-        });
-
-
+        plusButton.setOnAction(actionEvent -> mathOperationAction("Plus"));
+        minusButton.setOnAction(actionEvent -> mathOperationAction("Minus"));
+        multiplyButton.setOnAction(actionEvent -> mathOperationAction("Multiply"));
+        divideButton.setOnAction(actionEvent -> mathOperationAction("Divide"));
+        remOfDivButton.setOnAction(actionEvent -> mathOperationAction("RemOfDiv"));
+        absButton.setOnAction(actionEvent -> mathOperationAction("Abs"));
         calcButton.setOnAction(actionEvent -> {
-            if (firstNum != null && secondNum != null && param != null) {
-                boolean AbsParsed = true;
-                try {
-                    Double.parseDouble(secondNum);
-                    switch (param) {
-                        case "Plus" -> result = Double.parseDouble(firstNum) + Double.parseDouble(secondNum);
-                        case "Minus" -> result = Double.parseDouble(firstNum) - Double.parseDouble(secondNum);
-                        case "Multiply" -> result = Double.parseDouble(firstNum) * Double.parseDouble(secondNum);
-                        case "Divide" -> result = Double.parseDouble(firstNum) / Double.parseDouble(secondNum);
-                        case "RemOfDiv" -> result = Double.parseDouble(firstNum) % Double.parseDouble(secondNum);
-                        case "Abs" -> {
-                            try {
-                                result = Math.abs(Double.parseDouble(calcArea.getText()));
-                            } catch (NumberFormatException e) {
-                                e.printStackTrace();
-                                AbsParsed = false;
-                            }
+            if (!firstNum.equals("")) {
+                if (param.equals("Abs")) {
+                    result = Math.abs(Double.parseDouble(firstNum));
+                } else {
+                    try {
+                        Double.parseDouble(secondNum);
+                        switch (param) {
+                            case "Plus" -> result = Double.parseDouble(firstNum) + Double.parseDouble(secondNum);
+                            case "Minus" -> result = Double.parseDouble(firstNum) - Double.parseDouble(secondNum);
+                            case "Multiply" -> result = Double.parseDouble(firstNum) * Double.parseDouble(secondNum);
+                            case "Divide" -> result = Double.parseDouble(firstNum) / Double.parseDouble(secondNum);
+                            case "RemOfDiv" -> result = Double.parseDouble(firstNum) % Double.parseDouble(secondNum);
                         }
-                    }
-                    if (AbsParsed) {
-                        calcArea.setText(String.valueOf(result));
+                        calcArea.setText("" + result);
                         param = "";
                         firstNum = "" + result;
                         secondNum = "";
                         result = 0;
                         another = false;
-                        mathOperDefined = false;
+                        mathOperationDefined = false;
                         logsField.setText(logsField.getText() + "\nSuccessful second num parse!");
+
+                    } catch (NumberFormatException e) {
+                        e.printStackTrace();
+                        logsField.setText(logsField.getText() + "\nCan't parse second num!");
                     }
-                } catch (NumberFormatException e) {
-                    e.printStackTrace();
-                    logsField.setText(logsField.getText() + "\nCan't parse second num!");
                 }
-            } else logsField.setText(logsField.getText() + "\nWrong numbers input!");
+            } else {
+                logsField.setText(logsField.getText() + "\nThere is nothing to calc!");
+            }
         });
     }
-
     @FXML
     void initialize() {
         //calcButton.setOnAction(event -> calcArea.setText();
