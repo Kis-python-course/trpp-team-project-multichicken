@@ -17,6 +17,8 @@ public class Main extends Application {
         primaryStage.show();
     }
     public static void main(String[] args) {
+
+        System.out.println(Double.parseDouble("-5.0"));
         launch(args);
     }
 }
