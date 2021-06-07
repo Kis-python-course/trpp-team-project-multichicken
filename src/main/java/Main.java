@@ -15,4 +15,6 @@ public class Main extends Application {
         primaryStage.setResizable(false);
         primaryStage.show();
     }
+    //Перед запуском необходимо задать параметры конфигурации запуска VM options
+    //Они выглядят как-то так: --module-path "путь до вашей javafx-sdk/lib" --add-modules javafx.controls,javafx.fxml
 }
