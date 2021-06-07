@@ -1,0 +1,8 @@
+-classpath 'C:\\Users\\K03bIPb\\IdeaProjects\\GradleJavaFXProj\\build\\classes\\java\\main;C:\\Users\\K03bIPb\\IdeaProjects\\GradleJavaFXProj\\build\\classes\\kotlin\\main;C:\\Users\\K03bIPb\\IdeaProjects\\GradleJavaFXProj\\build\\resources\\main;C:\\Users\\K03bIPb\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin\\kotlin-stdlib\\1.4.32\\461367948840adbb0839c51d91ed74ef4a9ccb52\\kotlin-stdlib-1.4.32.jar;C:\\Program Files\\Java\\javafx-sdk-16\\lib\\javafx.fxml.jar;C:\\Program Files\\Java\\javafx-sdk-16\\lib\\javafx.base.jar;C:\\Program Files\\Java\\javafx-sdk-16\\lib\\javafx.controls.jar;C:\\Program Files\\Java\\javafx-sdk-16\\lib\\javafx.graphics.jar;C:\\Users\\K03bIPb\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin\\kotlin-stdlib-common\\1.4.32\\ef50bfa2c0491a11dcc35d9822edbfd6170e1ea2\\kotlin-stdlib-common-1.4.32.jar;C:\\Users\\K03bIPb\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains\\annotations\\13.0\\919f0dfe192fb4e063e7dacadee7f8bb9a2672a9\\annotations-13.0.jar'
+-d 'C:\\Users\\K03bIPb\\IdeaProjects\\GradleJavaFXProj\\build\\docs\\javadoc'
+-doctitle 'GradleJavaFXProj 1.0-SNAPSHOT API'
+-notimestamp 
+-quiet 
+-windowtitle 'GradleJavaFXProj 1.0-SNAPSHOT API'
+'C:\\Users\\K03bIPb\\IdeaProjects\\GradleJavaFXProj\\src\\main\\java\\Main.java'
+'C:\\Users\\K03bIPb\\IdeaProjects\\GradleJavaFXProj\\src\\main\\java\\research\\Controller.java'

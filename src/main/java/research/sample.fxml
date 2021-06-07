@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="433.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="research.Controller">
+   <Button layoutX="2.0" prefHeight="81.0" prefWidth="600.0" text="    ULTIMATE MULTICHICKEN CALCULATOR">
+      <font>
+         <Font name="Arial" size="26.0" />
+      </font>
+   </Button>
+   <Button fx:id="calcButton" layoutX="460.0" layoutY="101.0" mnemonicParsing="false" prefHeight="69.0" prefWidth="91.0" text="Calculate" />
+   <GridPane alignment="BOTTOM_LEFT" layoutX="15.0" layoutY="189.0" prefHeight="164.0" prefWidth="534.0">
+      <columnConstraints>
+         <ColumnConstraints hgrow="SOMETIMES" maxWidth="332.33331298828125" minWidth="10.0" prefWidth="273.0" />
+         <ColumnConstraints hgrow="SOMETIMES" maxWidth="484.0000228881836" minWidth="0.0" prefWidth="79.0" />
+         <ColumnConstraints hgrow="SOMETIMES" maxWidth="484.0000228881836" minWidth="10.0" prefWidth="194.0" />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+      <Button fx:id="plusButton" maxWidth="38.0" minHeight="25.0" minWidth="18.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="30.0" scaleX="2.0" scaleY="2.0" text="+" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER" />
+      <Button fx:id="remOfDivButton" maxWidth="38.0" minHeight="25.0" minWidth="38.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="38.0" scaleX="2.0" scaleY="2.0" text="\%" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+      <Button fx:id="minusButton" maxWidth="38.0" minHeight="25.0" minWidth="38.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="38.0" scaleX="2.0" scaleY="2.0" text="-" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+      <Button fx:id="multiplyButton" maxWidth="35.0" minHeight="25.0" minWidth="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="10.0" scaleX="2.2" scaleY="2.0" text="X" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.valignment="CENTER" />
+      <Button fx:id="divideButton" maxWidth="38.0" minHeight="25.0" minWidth="38.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="38.0" scaleX="2.0" scaleY="2.0" text="/" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+      <Button fx:id="absButton" maxHeight="25.0" maxWidth="38.0" minHeight="25.0" minWidth="38.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="38.0" scaleX="2.0" scaleY="2.0" text="ABS" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+      <Button fx:id="one" mnemonicParsing="false" scaleX="2.0" scaleY="2.0" text="1" translateX="75.0" GridPane.valignment="CENTER" />
+      <Button fx:id="two" mnemonicParsing="false" scaleX="2.0" scaleY="2.0" text="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+      <Button fx:id="three" mnemonicParsing="false" scaleX="2.0" scaleY="2.0" text="3" translateX="-75.0" GridPane.halignment="RIGHT" GridPane.valignment="CENTER" />
+      <Button fx:id="eight" mnemonicParsing="false" scaleX="2.0" scaleY="2.0" text="8" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+      <Button fx:id="six" mnemonicParsing="false" scaleX="2.0" scaleY="2.0" text="6" translateX="-75.0" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+      <Button fx:id="four" mnemonicParsing="false" scaleX="2.0" scaleY="2.0" text="4" translateX="75.0" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+      <Button fx:id="nine" mnemonicParsing="false" scaleX="2.0" scaleY="2.0" text="9" translateX="-75.0" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+      <Button fx:id="five" mnemonicParsing="false" scaleX="2.0" scaleY="2.0" text="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+      <Button fx:id="seven" mnemonicParsing="false" scaleX="2.0" scaleY="2.0" text="7" translateX="75.0" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+      <Button fx:id="zero" mnemonicParsing="false" prefHeight="51.0" prefWidth="58.0" text="0" GridPane.rowIndex="2">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="doubleZero" mnemonicParsing="false" prefHeight="51.0" prefWidth="59.0" text="00" GridPane.rowIndex="1">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="clearAll" mnemonicParsing="false" prefHeight="51.0" prefWidth="119.0" text="clear all" GridPane.columnIndex="2" GridPane.halignment="RIGHT">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="clearOne" mnemonicParsing="false" prefHeight="51.0" prefWidth="129.0" text="clear one" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+   </GridPane>
+   <TextField fx:id="calcArea" layoutX="18.0" layoutY="101.0" prefHeight="69.0" prefWidth="416.0">
+      <font>
+         <Font size="24.0" />
+      </font>
+   </TextField>
+   <Accordion />
+   <TextArea fx:id="logsField" editable="false" layoutX="98.0" layoutY="359.0" prefHeight="60.0" prefWidth="487.0" />
+   <Text layoutX="36.0" layoutY="398.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Logs:">
+      <font>
+         <Font size="24.0" />
+      </font>
+   </Text>
+</AnchorPane>

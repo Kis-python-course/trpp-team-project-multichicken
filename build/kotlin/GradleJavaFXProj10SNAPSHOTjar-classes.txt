@@ -1,0 +1,1 @@
+C:\Users\K03bIPb\IdeaProjects\GradleJavaFXProj\build\classes\java\main\Main.class;C:\Users\K03bIPb\IdeaProjects\GradleJavaFXProj\build\classes\java\main\research\Controller.class
