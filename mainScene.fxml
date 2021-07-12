@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<VBox xmlns:fx="">
+    xmlns="http://javafx.com/javafx"
+    xmlns:fx="http://javafx.com/fxml">
+    <Label text="Hello world!"/>
+    <Label text="This is a simple demo application."/>
+    <Label fx:id="mainTitle" text="Hello world!"/>
+    <Button text="Click me!"/>
+</VBox>
